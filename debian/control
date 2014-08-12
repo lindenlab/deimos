@@ -1,0 +1,12 @@
+Source: deimos
+Maintainer: Mesosphere <support@mesosphere.io>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: python-deimos
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Mesos containerization hooks for Docker
+
