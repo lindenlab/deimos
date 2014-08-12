@@ -39,7 +39,7 @@ clean:
 	rm -rf toor
 	rm -rf dist
 	rm -rf build
-	sudo rm -rf $(tmp)
+	rm -rf $(tmp)
 
 .PHONY: prep-ubuntu
 prep-ubuntu:
