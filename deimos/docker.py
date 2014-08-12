@@ -118,8 +118,8 @@ def matching_image_for_host(distro=None, release=None, *args, **kwargs):
     if distro is None or release is None:
         # TODO: Use redhat-release, &c
         rel_string = Run(data=True)(["bash", "-c", """
-            set -o errexit -o nounset -o pipefail
-            ( source /etc/os-release && tr A-Z a-z <<<"$ID\t$VERSION_ID" )
+            set -o errexit -o pipefail
+            ( ID=unknown; VERSION_ID=unknown; source /etc/os-release && tr A-Z a-z <<<"$ID\t$VERSION_ID" )
         """])
         probed_distro, probed_release = rel_string.strip().split()
         distro, release = (distro or probed_distro, release or probed_release)
