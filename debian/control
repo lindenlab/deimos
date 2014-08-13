@@ -7,6 +7,6 @@ Standards-Version: 3.9.1
 
 Package: python-deimos
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: ${misc:Depends}, ${python:Depends}, docker.io, python-docker
 Description: Mesos containerization hooks for Docker
 
